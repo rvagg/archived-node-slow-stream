@@ -1,0 +1,30 @@
+{
+    "name"            : "slow-stream"
+  , "description"     : "A throttleable stream, for working in the slow-lane"
+  , "authors": [
+        "Rod Vagg @rvagg <rod@vagg.org> (https://github.com/rvagg)"
+    ]
+  , "keywords"        : [
+        "stream"
+      , "throttle"
+      , "slow"
+      , "sloth"
+      , "testing"
+    ]
+  , "version"         : "0.0.0"
+  , "main"            : "index.js"
+  , "dependencies"    : {}
+  , "devDependencies" : {
+        "buster"        : "*"
+      , "async"         : "*"
+      , "colors"        : "*"
+    }
+  , "repository": {
+        "type": "git"
+      , "url": "https://github.com/rvagg/node-slow-stream.git"
+    }
+  , "scripts"         : {
+        "test"          : "node test.js"
+    }
+  , "license"         : "MIT"
+}
