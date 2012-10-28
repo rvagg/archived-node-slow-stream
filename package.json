@@ -11,12 +11,11 @@
       , "sloth"
       , "testing"
     ]
-  , "version"         : "0.0.0"
+  , "version"         : "0.0.1"
   , "main"            : "index.js"
   , "dependencies"    : {}
   , "devDependencies" : {
-        "buster"        : "*"
-      , "async"         : "*"
+        "async"         : "*"
       , "colors"        : "*"
     }
   , "repository": {

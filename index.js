@@ -50,13 +50,11 @@ SlowStream.prototype.flush = function flush () {
       this._lastWrite = process.hrtime()
     }
 
-    if (this.queue.length) {
-      if (!this._timeout) {
-        this._timeout = setTimeout(function () {
-          this._timeout = null
-          this.flush()
-        }.bind(this), gap < 0 ? -gap : this.options.maxWriteInterval)
-      }
+    if (!this._timeout) {
+      this._timeout = setTimeout(function () {
+        this._timeout = null
+        this.flush()
+      }.bind(this), gap < 0 ? -gap : this.options.maxWriteInterval)
     }
   } else if (this._ended) {
     this.emit('end')
