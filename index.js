@@ -58,6 +58,7 @@ SlowStream.prototype.flush = function flush () {
     }
   } else if (this._ended) {
     this.emit('end')
+    this.emit('close')
   } else {
     this.emit('drain')
   }
