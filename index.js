@@ -57,8 +57,11 @@ SlowStream.prototype.flush = function flush () {
       }.bind(this), gap < 0 ? -gap : this.options.maxWriteInterval)
     }
   } else if (this._ended) {
-    this.emit('end')
-    this.emit('close')
+    if (!this._closed) {
+      this._closed = true
+      this.emit('end')
+      this.emit('close')
+    }
   } else {
     this.emit('drain')
   }
